@@ -78,6 +78,7 @@ main {
 }
 
 .toggle-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     gap: .4rem
@@ -111,22 +112,24 @@ main {
 
 }
 
-.theme-toggle::after {
-    content: "1 2 3";
-    position: absolute;
-    bottom: 20px;
-    left: 6px;
-    letter-spacing: .15rem;
-    color: var(--color-screen-text);
-    font-size: .6rem;
-}
-
 .theme-toggle-label {
+    position: relative;
     font-size: .8rem;
     color : var(--color-screen-text);
     justify-self: end;
     
 }
+
+.toggle-wrapper::after {
+    content: "1 2 3";
+    position: absolute;
+    bottom: 20px;
+    left: 55px;
+    letter-spacing: .15rem;
+    color: var(--color-screen-text);
+    font-size: .6rem;
+}
+
 
 .toggle {
     background-color: var(--color-secondary);

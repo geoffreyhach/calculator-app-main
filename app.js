@@ -8,6 +8,17 @@ let operator = null;
 const regex = /ab+c/;
 screen.value = firstValue;
 
+//theme selector
+let themeToggle = document.querySelector('.theme-toggle');
+let body = document.querySelector('body');
+themeToggle.value = 1;
+
+themeToggle.addEventListener('input', () => {
+    let i = themeToggle.value;
+
+    body.classList.remove(...body.classList);
+    body.classList.add(`theme${i}`);
+})
 
 key.forEach(el => el.addEventListener('click', () => {
     pressedKey = el.value;

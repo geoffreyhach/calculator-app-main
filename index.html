@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
+<body class="theme1">
   <main>
     <div class="calculator">
       <div class="calculator-top-section">
         <h1>calc</h1>
-        <button class="theme-toggle">theme 123<span></button>
-
+        <div class="toggle-wrapper">
+          <label for="theme-toggle" class="theme-toggle-label">THEME</label>
+          <input type="range" class="theme-toggle" id="theme-toggle" name="theme-toggle" min="1" max="3" step="1" >
+        </div>
+        
       </div>
       <input type="text" class="calculator-screen"
       id="calculator-screen">

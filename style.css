@@ -103,6 +103,12 @@ input[type=number] {
     box-shadow: none;
 }
 
+.active {
+    opacity: .8;
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
 .del,
 .reset {
     background-color: var(--color-function-key);

@@ -62,15 +62,14 @@ main {
     align-items: center;
     padding: 1rem;
     gap: 2rem;
-    height: 95vh;
+    height: 100vh;
 }
 
 .calculator {
     display: flex;
     flex-direction: column;
-    width : min(70%, 350px);
-    gap : 1rem;
-    
+    width : min(80%, 350px);
+    gap : 1rem;   
 }
 
 .calculator-top-section {
@@ -222,7 +221,8 @@ h1 {
 }
 
 .attribution {
-    color : var(--color-screen-text)
+    color : var(--color-screen-text);
+    text-align: center;
 }
 
 .attribution a {

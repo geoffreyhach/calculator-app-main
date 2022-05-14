@@ -45,7 +45,7 @@ key.forEach(el => el.addEventListener('click', () => {
     if (el.classList.contains('operator'))  {
         
         
-        if (el.value == "-" ) {
+        if (el.value == "-" && screen.value == 0) {
         screen.value='-';
         return;
         }

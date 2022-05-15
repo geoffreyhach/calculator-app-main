@@ -6,6 +6,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+/* ==========
+    THEMES
+   ========== */
+
 .theme1 {
     --color-primary : hsl(222, 26%, 31%);
     --color-secondary : hsl(223, 31%, 20%);
@@ -49,6 +53,10 @@
     --color-equal-key : hsl(176, 100%, 44%);
     --color-equal-shadow : hsl(177, 92%, 70%);
 }
+
+/* ==========
+    LAYOUT
+   ========== */
 
 body {
     background-color: var(--color-primary);
@@ -131,7 +139,6 @@ main {
     font-size: .6rem;
 }
 
-
 .toggle {
     background-color: var(--color-secondary);
     width: 30px;
@@ -168,6 +175,24 @@ input[type=number] {
     border-radius: 10px;
     gap : .7rem;
 }
+
+.attribution {
+    color : var(--color-screen-text);
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--color-equal-key)
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+/* ==========
+    ELEMENTS
+   ========== */
 
 .key {
     height: 50px;
@@ -215,21 +240,12 @@ input[type=number] {
     grid-column: span 2;
 }
 
+/* ==========
+    TYPOS
+   ========== */
+
 h1 {
     font-family: 'Poppins', sans-serif;
     color : var(--color-screen-text);
 }
 
-.attribution {
-    color : var(--color-screen-text);
-    text-align: center;
-}
-
-.attribution a {
-    text-decoration: none;
-    color: var(--color-equal-key)
-}
-
-.attribution a:hover {
-    text-decoration: underline;
-}

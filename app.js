@@ -1,12 +1,4 @@
-let key = document.querySelectorAll('.key');
-let screen = document.querySelector('#calculator-screen');
-let operatorKeys = document.querySelectorAll('.operator');
-let pressedKey;
-let firstValue = 0;
-let secondValue = null;
-let operator = null;
-const regex = /ab+c/;
-screen.value = firstValue;
+
 
 //theme selector
 let themeToggle = document.querySelector('.theme-toggle');
@@ -19,6 +11,18 @@ themeToggle.addEventListener('input', () => {
     body.classList.remove(...body.classList);
     body.classList.add(`theme${i}`);
 })
+
+
+//calculator functions
+let key = document.querySelectorAll('.key');
+let screen = document.querySelector('#calculator-screen');
+let operatorKeys = document.querySelectorAll('.operator');
+let pressedKey;
+let firstValue = 0;
+let secondValue = null;
+let operator = null;
+screen.value = firstValue;
+
 
 key.forEach(el => el.addEventListener('click', () => {
     pressedKey = el.value;
@@ -44,32 +48,31 @@ key.forEach(el => el.addEventListener('click', () => {
     //if pressing an operator
     if (el.classList.contains('operator'))  {
         
-        
+        //minus sign for negative numbers
         if (el.value == "-" && screen.value == 0) {
         screen.value='-';
         return;
         }
 
-        // and if no other operator isn't selected
+        //if no other operator is selected
         if (operator == null) {
         firstValue = screen.value;
         operator = el.value; 
         return
         }
 
-        // and another operator is already selected
-        if (operator !== null && secondValue == null){ 
+        // and another operator is already selected without changing screen value
+        if (operator !== null && firstValue == screen.value){ 
             operator = el.value;
             return;
         }
-    
+        //with another operator selected and new screen value
         if (operator !== null) {
             secondValue = screen.value;
             screen.value = calculate();
             operator = el.value; 
             firstValue = screen.value; 
         }
-        
     }
 
     if (el.classList.contains('equal'))  {

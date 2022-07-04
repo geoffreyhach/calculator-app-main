@@ -62,10 +62,10 @@ key.forEach(el => el.addEventListener('click', () => {
         }
 
         // and another operator is already selected without changing screen value
-        if (operator !== null && firstValue == screen.value){ 
-            operator = el.value;
-            return;
-        }
+        // if (operator !== null && firstValue == screen.value){ 
+        //     operator = el.value;
+        //     return;
+        // }
         //with another operator selected and new screen value
         if (operator !== null) {
             secondValue = screen.value;

@@ -78,6 +78,8 @@ key.forEach(el => el.addEventListener('click', () => {
     if (el.classList.contains('equal'))  {
         secondValue = screen.value;
         screen.value = calculate();
+        firstValue = screen.value;
+        operator = null;
     }
 
     if (el.classList.contains('reset')) {

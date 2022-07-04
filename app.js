@@ -28,7 +28,7 @@ key.forEach(el => el.addEventListener('click', () => {
     pressedKey = el.value;
     // if pressing number and no operator selected
     if (el.classList.contains('number') && operator == null) {
-        if (screen.value == 0) screen.value = pressedKey;
+        if (screen.value == null) screen.value = pressedKey;
         else screen.value += Number(pressedKey);      
     }
 
